@@ -1,0 +1,26 @@
+/* claude.ai version: import banner, mind-map overlay, Edit tab */
+#importBar{margin:12px 0 0}
+.imp{border-color:var(--accent);display:grid;gap:8px}
+.tabmap{margin-left:auto;border:0;background:none;color:var(--accent);font:500 14px var(--sans);cursor:pointer;padding:10px 12px;white-space:nowrap}
+.tabmap:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#mapOv{position:fixed;inset:0;z-index:2147483600;background:var(--bg);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+#mapOv[hidden]{display:none}
+#mapOv .mapbar{display:flex;gap:12px;align-items:center;padding:8px max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line);background:var(--surface);color:var(--ink)}
+#mapOv .mapbar .note{flex:1;min-width:0}
+#mapOv iframe{flex:1;border:0;width:100%;background:var(--bg)}
+html.mapopen,html.mapopen body{overflow:hidden}
+.edform{display:grid;gap:12px}
+.edform label.f{display:grid;gap:4px;font-size:12.5px;color:var(--muted)}
+.edform input[type=text],.edform select,.edform textarea,#edQ{width:100%;font:inherit;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:7px 9px;min-width:0}
+.edform textarea{resize:vertical;line-height:1.45}
+.edgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+@media (max-width:640px){.edgrid{grid-template-columns:minmax(0,1fr)}}
+.edopts{display:grid;gap:10px}
+.edopt{display:grid;gap:6px;border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--node)}
+.edck{display:inline-flex;gap:6px;align-items:center;font-size:13px;color:var(--ink)}
+.edtypes{display:flex;flex-wrap:wrap;gap:6px 14px;border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:0}
+.edhits{display:grid;gap:6px;max-height:50vh;overflow:auto}
+.edmsg{padding:8px 10px;border-radius:6px;background:var(--accent-soft);color:var(--ink)}
+
+.hdact{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap}
+.hdact .btn{white-space:nowrap}
